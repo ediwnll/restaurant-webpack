@@ -1,0 +1,330 @@
+:root{
+    --darkgrey: #3D3B30;
+    --darkblue: #4D5061;
+    --lightblue: #5C80BC;
+    --beige: #E9EDDE;
+    --corn: #E7E247;
+    --cougare: 'Courgette', cursive;
+    --cantarell: 'Cantarell', sans-serif;
+    --nunito: 'Nunito', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    background: var(--beige);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 9vh;
+    max-height: 9vh;
+    background: var(--darkblue);
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 3rem;
+}
+
+.nav-title{
+    font-size: 32px;
+    font-family: var(--cougare);
+}
+
+.nav-logo{
+    width: 60px;
+    height: 60px;
+}
+
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10rem;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.button-nav{
+    background-color: transparent;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-family: var(--cougare);
+    font-size: 2rem;
+    color: var(--beige);
+    border: none;
+}
+
+li:hover {
+    color: var(--lightblue);
+  }
+
+/*#main{
+    background: url(./images/background.jpg) no-repeat center center fixed;
+    height: 91vh;
+}
+
+#main .home-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}*/
+
+#main{
+    background: url(./images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 91vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#main h1{
+    font-family: var(--cougare);
+    font-size: 4rem;
+    background: linear-gradient(to right, #E9EDDE 45%, var(--lightblue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 5px;
+
+    text-align: center;
+
+}
+
+#main p{
+    text-align: center;
+    font-family: var(--cougare);
+    font-size: 2rem;
+    color: var(--beige);
+}
+
+#main .button-container{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#main .button-container .order-now{
+    padding: 8px 22px;
+    border-radius: 25px;
+    background-color: var(--lightblue);
+    text-decoration: none;
+    color: var(--beige);
+    font-size: 1.5rem;
+    font-family: var(--cantarell);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.info{
+    width: calc(15rem + 25vw);
+    height: calc(15rem + 5vw);
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.info .address-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .opening-hours-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fa-location-dot, .fa-clock{
+    color: var(--beige);
+    font-size: 32px;
+}
+
+.opening span{
+    color: var(--lightblue);
+    font-size: 2rem;
+    font-family: var(--cougare)
+}
+
+#menu .menu-header, #contact .contact-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding: 0 10px;
+}
+
+#menu .menu-header h1, #contact .contact-header h1{
+    font-family: var(--cougare);
+    font-size: 4.5rem;
+} 
+
+#menu .menu-header .menu-logo, #contact .contact-header .contact-logo{
+    width: 4.5rem;
+    height: 4.5em;
+}
+
+#menu .menu-container{
+    width: 70%;
+    background: var(--lightblue);
+    padding: calc(2rem + 2vw);
+    border-radius: 1.2rem;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-container .menu-logo{
+    width: calc(4rem + 6vw);
+    height: calc(4rem + 6vw);
+}
+
+#menu .menu-item{
+    flex-basis: 30rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    gap: 10px;
+}
+
+#menu .item-content h4{
+    font-family: var(--cougare);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--darkgrey);
+    border-bottom: 1px dashed #E9EDDE;
+}
+
+#menu .item-content span{
+    font-size: 1rem;
+    float: right;
+}
+
+#menu .item-content p{
+    font-family: var(--nunito);
+    text-align: justify;
+    font-size: 1.2rem;
+}
+#contact .contact-container{
+    width: 60%;
+    background: var(--lightblue);
+    padding: calc(0.5rem + 1vw);
+    border-radius: 1.2rem;
+    margin: 2.8rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#contact .contact-info p {
+    font-family: var(--nunito);
+    text-align: justify;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+#contact .contact-info i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  color:var(--darkgrey);  
+}
+
+#contact .contact-container h3 {
+    font-size: 1.5rem;
+    font-family: var(--nunito);
+    font-weight: lighter;
+    color: var(--darkgrey);
+}
+
+#contact .contact-container .input-box{
+    position: relative;
+    margin-top: 1rem;
+}
+
+#contact .contact-container .input-box input, #contact .contact-container .input-box textarea{
+    width: 98%;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--darkblue);
+    resize: none;
+    background: rgba(243, 55, 55, 0);
+}
+
+#contact .contact-container .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #666;
+    font-family: var(--nunito);
+}
+
+#contact .contact-container input[type="submit"]{
+    width: 10rem;
+    font-size: 1rem;
+    background: var(--darkgrey);
+    padding: 8px 22px;
+    color: var(--beige);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s
+}
+
+#contact .contact-container .input-box input:focus ~ span,
+#contact .contact-container .input-box input:valid ~ span,
+#contact .contact-container .input-box textarea:focus ~ span,
+#contact .contact-container .input-box textarea:valid ~ span {
+  color: var(--corn);
+  font-size: 1.2rem;
+  transform: translateY(-2rem);
+}
+
+#contact .contact-container textarea,
+#contact .contact-container input[type="text"] {
+  font-family: var(--nunito);
+}
+
+#contact .contact-container input[type="submit"] {
+  width: 10rem;
+  font-size: 1.6rem;
+  background: var(--darkgrey);
+  padding: 8px 22px;
+  color: var(--beige);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#contact .contact-container input[type="submit"]:hover {
+  background: #ce103f;
+}
