@@ -44,7 +44,7 @@ function createContact(){
     const form = document.createElement("div")
     form.classList.add("contact-form")
     const contactForm = document.createElement("form")
-    
+
 
 
 
